@@ -6,6 +6,22 @@
         {% include "js.html" %}
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <div class="row">
+            <div class="panel landing-panel span9 offset3">
+                <div class="text-center">
+                    <h1>Submit Journal Document</h1>
+                    <p>
+                        <b>
+                    {% block title %}
+                    {% endblock %}
+                        </b>
+                    </p>
+                </div>
+                <div class="margin-form">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
     </body>
 </html>

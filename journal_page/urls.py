@@ -8,6 +8,8 @@ from django.conf.urls.static import static
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'registration_page.views.home', name='home'),
+    url(r'^authors$', 'registration_page.views.authors', name='authors'),
+    url(r'^thank-you$', 'registration_page.views.thank_you', name='thank_you'),
     # url(r'^journal_page/', include('journal_page.foo.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

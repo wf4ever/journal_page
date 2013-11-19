@@ -6,14 +6,20 @@ html {
     background-size: cover;
 }
 body {
-    font-family: "Open Sans",serif;
+    margin-top: 50px;
+    /*font-family: "Open Sans",serif;*/
     background: transparent;
 }
 
 h1 {
-    font-family: "Abel", Arial, sans-serif;
+    /*font-family: "Abel", Arial, sans-serif;*/
     font-weight: 400;
-    font-size: 40px;
+    font-size: 50px;
+}
+
+.margin-form {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* Override B3 .panel adding a subtly transparent background */
