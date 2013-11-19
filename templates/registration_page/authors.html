@@ -6,25 +6,29 @@
 <div class="row-fluid">
     <form action="/thank-you" method="POST">
         <div class="row-fluid">
-            <div id="authors_group">
-  
-                <div class="control-group span6">
-                    <label for="first-name">Name:</label>
-                    <input id="first-name" type="text" class="input-block-level">
-                </div>
-                <div class="control-group span6">
-                    <label for="first-name">Surname:</label>
-                    <input id="first-name" type="text" class="input-block-level">
+            <div id="authors_list">
+                <div id="author_group">
+                    <div class="control-group span6">
+                        <label for="first-name">Name:</label>
+                        <input id="first-name" type="text" class="input-block-level">
+                    </div>
+                    <div class="control-group span6">
+                        <label for="first-name">Surname:</label>
+                        <input id="first-name" type="text" class="input-block-level">
+                    </div>
                 </div>
             </div>
-                <div class="control-group span6">
-                <button class="btn btn-primary" name="commit" type="button">Add author</button>
-                </div>
-                <div class="control-group span6">
-                <button class="btn btn-primary" name="commit" type="submit">Next</button>
-                </div>
-            </p>
-            
+            <div class="control-group span6">
+                <button class="btn btn-primary" name="commit" id="add_author_button" type="button">
+                    Add author
+                </button>
+            </div>
+            <div class="control-group span6">
+                <button class="btn btn-primary" name="commit" type="submit">
+                    Next
+                </button>
+            </div>
+        </p>
     </form>
 </div>
 {% endblock %}
