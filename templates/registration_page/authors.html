@@ -4,26 +4,29 @@
 {% endblock %}
 {% block content %}
 <div class="row-fluid">
-    <form action="/contribution-details" method="POST">
-        <div class="row-fluid">
-            <div id="authors_list">
-                <div id="author_group">
-                    <div class="control-group span6">
-                        <label for="first-name">Name:</label>
+    <form action="/title-and-abstract" method="POST">
+        <div id="authors_list">
+            <div id="author_group">
+                <div class="control-group span4">
+                    <label for="first-name">First Name:</label>
+                        <input id="first-name" type="text" class="input-block-level">
+               </div>
+                <div class="control-group span4">
+                    <label for="first-name">Last Name:</label>
                         <input id="first-name" type="text" class="input-block-level">
                     </div>
-                    <div class="control-group span6">
-                        <label for="first-name">Surname:</label>
+                    <div class="control-group span4">
+                        <label for="first-name">Email:</label>
                         <input id="first-name" type="text" class="input-block-level">
                     </div>
                 </div>
             </div>
-            <div class="control-group span6">
+            <div class="control-group">
                 <button class="btn btn-primary" name="commit" id="add_author_button" type="button">
                     Add author
                 </button>
             </div>
-            <div class="control-group span6">
+            <div class="control-group">
                 <button class="btn btn-primary" name="commit" type="submit">
                     Next
                 </button>

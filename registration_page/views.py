@@ -7,8 +7,8 @@ def home(request):
 def authors(request):
     return render_to_response('registration_page/authors.html',{})
 
-def authors(request):
-    return render_to_response('registration_page/contribution_details.html',{})
+def title_and_abstract(request):
+    return render_to_response('registration_page/title_and_abstract.html',{})
 
 def thank_you(request):
     return render_to_response('registration_page/thank_you.html',{})

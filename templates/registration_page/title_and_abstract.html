@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    Put Title and Abstract
+{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <form action="/thank-you" class= "form-horizontal" method="POST">
+        <div class="control-group">
+            <label for="first-name">Title:</label>
+            <input type="text" class="input-block-level">
+        </div>
+        <div class="control-group">
+            <label for="Abstract">Abstract:</label>
+            <textarea class="input-block-level" rows="3"></textarea>
+        </div>
+        <div class="control-group">
+            <button class="btn btn-primary" name="commit" type="submit">
+                Next
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
