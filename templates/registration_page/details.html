@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    Put Title and Abstract
+{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <form action="/sources" class= "form-horizontal" method="POST">
+        <div class="control-group">
+            <label for="first-name">Keywords:</label>
+            <input type="text" class="input-block-level" placeholder="keyword1, keyword2, ...">
+        </div>
+      <div class="control-group">
+            <label for="first-name">Supporting Agencies:</label>
+            <input type="text" class="input-block-level" placeholder="agancy1, agency2, ...">
+        </div>
+        <div class="control-group">
+            <button class="btn btn-primary" name="commit" type="submit">
+                Next
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

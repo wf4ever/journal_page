@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block title %}
-    Put Title and Abstract
+    Put Sources
 {% endblock %}
 {% block content %}
 <div class="row-fluid">
-    <form action="/details" class= "form-horizontal" method="POST">
+    <form action="/thank-you" method="POST">
         <div class="control-group">
-            <label for="first-name">Title:</label>
+            <label for="first-name">MyExperiment pack URI:</label>
             <input type="text" class="input-block-level">
         </div>
         <div class="control-group">
-            <label for="Abstract">Abstract:</label>
-            <textarea class="input-block-level" rows="3"></textarea>
+            <label for="exampleInputFile">Submission File:</label>
+            <input type="file" id="id_input_file" class="filestyle input-block-level" data-classButton="btn btn-primary" >
         </div>
         <div class="control-group">
             <button class="btn btn-primary" name="commit" type="submit">

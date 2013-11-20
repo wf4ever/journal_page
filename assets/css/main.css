@@ -6,7 +6,7 @@ html {
     background-size: cover;
 }
 body {
-    margin-top: 50px;
+    margin-top: 75px;
     /*font-family: "Open Sans",serif;*/
     background: transparent;
 }
@@ -31,4 +31,23 @@ h1 {
 
 .footer-div {
     padding-bottom: 15px;   
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
 }

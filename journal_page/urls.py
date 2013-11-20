@@ -11,6 +11,9 @@ urlpatterns = patterns('',
     url(r'^authors$', 'registration_page.views.authors', name='authors'),
     url(r'^thank-you$', 'registration_page.views.thank_you', name='thank_you'),
     url(r'^title-and-abstract$', 'registration_page.views.title_and_abstract', name='title_and_abstract'),
+    url(r'^details$', 'registration_page.views.details', name='details'),
+    url(r'^sources$', 'registration_page.views.sources', name='sources'),
+
     # url(r'^journal_page/', include('journal_page.foo.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

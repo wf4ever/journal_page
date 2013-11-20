@@ -12,3 +12,9 @@ def title_and_abstract(request):
 
 def thank_you(request):
     return render_to_response('registration_page/thank_you.html',{})
+
+def details(request):
+    return render_to_response('registration_page/details.html',{})
+
+def sources(request):
+    return render_to_response('registration_page/sources.html',{})
