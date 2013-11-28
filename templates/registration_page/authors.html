@@ -1,37 +1,44 @@
 {% extends "base.html" %}
 {% block title %}
-    Add contribution authors
 {% endblock %}
 {% block content %}
-<div class="row-fluid">
-    <form action="/title-and-abstract" method="POST">
-        <div id="authors_list">
-            <div id="author_group">
-                <div class="control-group span4">
-                    <label for="first-name">First Name:</label>
-                        <input id="first-name" type="text" class="input-block-level">
-               </div>
-                <div class="control-group span4">
-                    <label for="first-name">Last Name:</label>
-                        <input id="first-name" type="text" class="input-block-level">
-                    </div>
-                    <div class="control-group span4">
-                        <label for="first-name">Email:</label>
-                        <input id="first-name" type="text" class="input-block-level">
-                    </div>
-                </div>
-            </div>
-            <div class="control-group">
-                <button class="btn btn-primary" name="commit" id="add_author_button" type="button">
-                    Add author
-                </button>
-            </div>
-            <div class="control-group">
-                <button class="btn btn-primary" name="commit" type="submit">
-                    Next
-                </button>
-            </div>
-        </p>
-    </form>
-</div>
+<div id="breadcrumb">
+    <a href="index/index.html">Home</a> &gt;
+            <a href="index.html" class="current">New Contribution</a></div>
+<h2>New contribution</h2>
+<div id="content">
+<br />
+    <h3>Put authors of new contribution</h3>  
+      <table>  
+            <form method="post" action="title-and-abstract">
+                    <div id="authorslists"></div>
+                        <td><input id="addauthors" type="button" class="button" value="Add Author"></input></td>
+                    </tr>
+                       <tr>
+                        <td><input type="submit" class="button" value="Next"></input></td>
+                    </tr>
+          
+                </form>
+      </table>
+<script>
+$(function() {
+    var div = "<tr><td style='width:100px;'><label for='sidebar-username'>First Name:</label></td><td><input type='text' id='sidebar-username' name='username' value='' size='70' maxlength='70' class='textField' /></td></tr><tr><td><label for='sidebar-password'>Last Name:</label></td><td><input type='password' id='sidebar-password' name='password' value='' size='70' maxlength='70' class='textField' /></td></tr><tr><td><label for='sidebar-password'>Email:</label></td><td><input type='text' id='sidebar-email' name='username' value='' size='70' maxlength='70' class='textField' /></td></tr>"
+    $("#authorslists").append(div);
+        $("#authorslists").append("<br></br>");
+
+  $("#addauthors").click(function(){
+
+
+    $("#authorslists").append(div);
+        $("#authorslists").append("<br></br>");
+    return false;
+  });
+});
+</script>
+
+
+
+
+
+
 {% endblock %}

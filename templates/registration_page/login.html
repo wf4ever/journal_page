@@ -1,21 +1,35 @@
 {% extends "base.html" %}
 {% block title %}
-    Log in to submit your contribution
+<div class="block" id="sidebarUser">
+            <span class="blockTitle">User</span>
+            <form method="post" action="loged">
+                <table>
+                    <tr>
+                        <td><label for="sidebar-username">Username</label></td>
+                        <td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sidebar-password">Password</label></td>
+                        <td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+                    </tr>
+                </table>
+            </form>
+            </div> 
 {% endblock %}
 {% block content %}
-<div class="row-fluid">
-    <form action="/authors" method="POST">
-            <div class="control-group span6">
-                <label for="first-name">Username:</label>
-                <input id="first-name" type="text" class="input-block-level">
-            </div>
-            <div class="control-group span6">
-                <label for="last-name">Password:</label>
-                <input id="last-name" type="password" class="input-block-level">
-            </div>
-            <div class="control-group">
-                <button class="btn btn-primary" name="commit" type="submit">Log In</button>
-            </div>
-    </form>
-</div>
+
+<div id="breadcrumb">
+    <a href="index/index.html">Home</a> &gt;
+            <a href="index.html" class="current">Open Journal Systems</a></div>
+<h2>Open Journal Systems</h2>
+<div id="content">
+<br />
+    <h3>Open Journal Systems Demonstration Journal</h3>    
+    <p><a href="demojournal.html" class="action">View Journal</a> | <a href="demojournal/issue/current.html" class="action">Current Issue</a> | <a href="demojournal/user/register.html" class="action">Register</a></p>
 {% endblock %}

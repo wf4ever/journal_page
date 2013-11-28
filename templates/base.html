@@ -1,27 +1,164 @@
-<html>
-    <head> 
-        <title>Journal Page</title>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        {% include "css.html" %}
-        {% include "js.html" %}
-    </head>
-    <body>
-        <div class="row-fluid">
-            <div class="offset2 span8">
-                <div class="panel landing-panel">
-                    <div class="text-center">
-                        <h1>Submit Journal Contribution</h1>
-                        <p>
-                            {% block title %}
-                            {% endblock %}
-                        </p>
-                    </div>
-                    <div class="margin-form">
-                        {% block content %}
-                        {% endblock %}
-                    </div>
-                </div>
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Open Journal Systems</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="generator" content="Open Journal Systems 2.3.7.0" />
+    
+    <link rel="stylesheet" href={% static "css/pkp.css" %} type="text/css" />
+    <link rel="stylesheet" href={% static "css/common.css" %} type="text/css" />
+    <link rel="stylesheet" href={% static "css/common.css" %} type="text/css" />
+    <link rel="stylesheet" href={% static "css/main.css" %} type="text/css" />
+    <!-- Base Jquery -->
+    <script type="text/javascript" src={% static "js/jquery-1.10.2.min.js" %}></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        // Provide a local fallback if the CDN cannot be reached
+        if (typeof google == 'undefined') {
+            document.write(unescape("%3Cscript src='http://journals.sfu.ca/present/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+            document.write(unescape("%3Cscript src='http://journals.sfu.ca/present/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+        } else {
+            google.load("jquery", "1.4.2");
+            google.load("jqueryui", "1.8.1");
+        }
+    </script>
+    
+    
+    
+    <link rel="stylesheet" href={% static "css/sidebar.css" %} type="text/css" />      
+    <link rel="stylesheet" href={% static "css/rightSidebar.css" %} type="text/css" /> 
+    
+    <script type="text/javascript" src={% static "js/general.js" %}></script>
+    <!--
+    <script type="text/javascript" src={% static "/js/tag-it.js" %}></script>
+    --
+    <!-- Add javascript required for font sizer -->
+    <script type="text/javascript" src={% static "js/jquery.cookie.js" %}></script>
+    <script type="text/javascript" src={% static "js/fontController.js"  %}></script>
+    <script type="text/javascript">
+        $(function(){
+            fontSize("#sizer", "body", 9, 16, 32, "/present"); // Initialize the font sizer
+        });
+    </script>
+
+    <script type="text/javascript">
+        // initialise plugins
+        
+        $(function(){
+            
+        });
+        
+    </script>
+
+    
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+    Open Journal Systems
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+    <div id="sidebar">
+                            <div id="rightSidebar">
+                <div class="block" id="sidebarDevelopedBy">
+    <a class="blockTitle" href="http://pkp.sfu.ca/ojs/" id="developedBy">Open Journal Systems</a>
+</div>  <div class="block" id="sidebarHelp">
+    <a class="blockTitle" href="javascript:openHelp('http://journals.sfu.ca/present/index.php/index/help/view/user/topic/000001')">Journal Help</a>
+</div>
+
+{% block title %}
+{% endblock %}
+    <div class="block" id="sidebarLanguageToggle">
+    <span class="blockTitle">Language</span>
+    <form action="#">
+        <select size="1" name="locale" onchange="location.href=('http://journals.sfu.ca/present/index.php/index/user/setLocale/NEW_LOCALE?source=%2Fpresent%2Findex.php%2Findex'.replace('NEW_LOCALE', this.options[this.selectedIndex].value))" class="selectMenu"><option label="English" value="en_US" selected="selected">English</option>
+<option label="Español" value="es_ES">Español</option>
+<option label="Français" value="fr_CA">Français</option>
+<option label="Português (Brasil)" value="pt_BR">Português (Brasil)</option>
+</select>
+    </form>
+</div>
+<div class="block" id="sidebarNavigation">
+    <span class="blockTitle">Journal Content</span>
+    
+    <span class="blockSubtitle">Search</span>
+    <form method="post" action="http://journals.sfu.ca/present/index.php/index/search/results">
+    <table>
+    <tr>
+        <td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+    </tr>
+    <tr>
+        <td><select name="searchField" size="1" class="selectMenu">
+            <option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+        </select></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Search" class="button" /></td>
+    </tr>
+    </table>
+    </form>
+    
+    <br />
+    
+    </div>
+<div class="block" id="sidebarFontSize" style="margin-bottom: 4px;">
+    <div id="sizer"></div>
+</div>
+<br />
             </div>
-        </div>
-    </body>
+            </div>
+
+<div id="main">
+<div id="navbar">
+    <ul class="menu">
+        <li id="home"><a href="index/index.html">Home</a></li>
+        <li id="about"><a href="index/about.html">About</a></li>
+
+                    <li id="login"><a href="index/login.html">Log In</a></li>
+                            <li id="register"><a href="index/user/register.html">Register</a></li>
+                                        <li id="search"><a href="index/search.html">Search</a></li>
+        
+        
+                
+
+            </ul>
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
 </html>
+
+
+
+
+

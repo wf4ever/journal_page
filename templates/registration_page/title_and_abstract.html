@@ -1,23 +1,35 @@
 {% extends "base.html" %}
 {% block title %}
-    Put Title and Abstract
 {% endblock %}
 {% block content %}
-<div class="row-fluid">
-    <form action="/details" class= "form-horizontal" method="POST">
-        <div class="control-group">
-            <label for="first-name">Title:</label>
-            <input type="text" class="input-block-level">
-        </div>
-        <div class="control-group">
-            <label for="Abstract">Abstract:</label>
-            <textarea class="input-block-level" rows="3"></textarea>
-        </div>
-        <div class="control-group">
-            <button class="btn btn-primary" name="commit" type="submit">
-                Next
-            </button>
-        </div>
-    </form>
-</div>
+<div id="breadcrumb">
+    <a href="index/index.html">Home</a> &gt;
+            <a href="index.html" class="current">New Contribution</a></div>
+<h2>New contribution</h2>
+<div id="content">
+<br />
+    <h3>Put details of new contribution</h3>  
+      <table>  
+        <form method="post" action="title-and-abstract">
+            <tr>
+                <td style="width:100px;"><label for="sidebar-username">Title:</label></td>
+                <td><input type="text" id="sidebar-username" name="username" value="" size="70" maxlength="100" class="textField" /></td>
+            </tr>
+            <tr>
+                <td style="width:150px;"><label>Abstract:</label></td>
+                <td><textarea rows="5" cols="70" class="textArea"></textarea></td>
+            </tr>
+            <tr>
+                <td style="width:100px;"><label for="sidebar-username">Keywords:</label></td>
+                <td><input type="text" id="sidebar-username" name="username" value="" size="70" maxlength="100" class="textField" /></td>
+            </tr>
+            <tr>
+                <td style="width:100px;"><label for="sidebar-username">Supporting Agencies:</label></td>
+                <td><input type="text" id="sidebar-username" name="username" value="" size="70" maxlength="100" class="textField" /></td>
+            </tr>
+            <td><br>
+                <input type="submit" class="button" value="Next"></input></td>
+        </form>
+      </table>
+
 {% endblock %}

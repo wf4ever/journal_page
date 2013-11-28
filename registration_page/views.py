@@ -4,6 +4,10 @@ from forms import RegistrationForm
 def home(request):
     return render_to_response('registration_page/login.html',{})
 
+def loged(request):
+    return render_to_response('registration_page/loged.html',{})
+
+
 def authors(request):
     return render_to_response('registration_page/authors.html',{})
 
